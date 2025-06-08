@@ -1,0 +1,243 @@
+[gd_scene load_steps=6 format=3 uid="uid://bn7cdp8xiirqu"]
+
+[ext_resource type="Script" path="res://Scripts/selPlayer.gd" id="1_ulcq8"]
+[ext_resource type="Texture2D" uid="uid://bjqjelf3wk02k" path="res://8b12059fb898b5a752b28b13db6fb51ee977d467.png" id="2_10wkj"]
+[ext_resource type="Texture2D" uid="uid://djfait5t7wfy6" path="res://icon.svg" id="3_c3bc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irchh"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pswgf"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popmargC" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_bottom = 0
+script = ExtResource("1_ulcq8")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popmargC"]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 2
+texture = ExtResource("2_10wkj")
+
+[node name="MarginContainerMalcom" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerMalcom"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_c3bc7")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Hi, Malcom"
+
+[node name="MarginContainerCoin" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerCoin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_c3bc7")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "340,000,000"
+
+[node name="MarginContainerNaira" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 44
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerNaira"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_c3bc7")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "60,000.00"
+
+[node name="MarginSelectPlayer" type="MarginContainer" parent="popmargC"]
+self_modulate = Color(1, 0, 0.00784314, 1)
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_bottom = 42
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/MarginSelectPlayer"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginClosePage" type="MarginContainer" parent="popmargC/MarginSelectPlayer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="Button" type="Button" parent="popmargC/MarginSelectPlayer/MarginClosePage"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "X"
+
+[node name="SelectPlayerMargContainer" type="MarginContainer" parent="popmargC/MarginSelectPlayer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_top = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 30
+
+[node name="LabelSelectPlayer" type="Label" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Select Player"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPlayers/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "PLAYERS"
+
+[node name="MarginPickPlayer" type="MarginContainer" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="ButtonLeft" type="Button" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.027451, 0, 0.435294)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_irchh")
+text = "<---"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer/ScrollContainer/MarginContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_constants/separation = 19
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer/ScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_c3bc7")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer/ScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_c3bc7")
+expand_mode = 1
+
+[node name="ButtonRight" type="Button" parent="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.0196078, 0, 0, 0.121569)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_pswgf")
+text = "---->"
+
+[connection signal="pressed" from="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer/ButtonLeft" to="popmargC" method="_on_button_left_pressed"]
+[connection signal="pressed" from="popmargC/MarginSelectPlayer/SelectPlayerMargContainer/VBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer/ButtonRight" to="popmargC" method="_on_button_right_pressed"]

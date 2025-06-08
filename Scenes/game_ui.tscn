@@ -1,0 +1,246 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv4bvbl4jw26c"]
+
+[ext_resource type="Script" path="res://Scripts/popmarg_cc.gd" id="1_6sjfj"]
+[ext_resource type="Texture2D" uid="uid://bjqjelf3wk02k" path="res://8b12059fb898b5a752b28b13db6fb51ee977d467.png" id="2_xo6ev"]
+[ext_resource type="Texture2D" uid="uid://djfait5t7wfy6" path="res://icon.svg" id="3_srd0c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drij2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bergx"]
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popmargC" type="MarginContainer" parent="." node_paths=PackedStringArray("storyB", "quickmatchB", "onlinemultiplayerB", "friendliesB", "superballleagueB", "eventsB")]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6sjfj")
+storyB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB")
+quickmatchB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/QuickmatchB")
+onlinemultiplayerB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/OnlinemultiB")
+friendliesB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/FriendliesB")
+superballleagueB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/SuperballB")
+eventsB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/Events")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popmargC"]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 2
+texture = ExtResource("2_xo6ev")
+
+[node name="menumargC" type="MarginContainer" parent="popmargC"]
+custom_minimum_size = Vector2(900, 243)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_left = 10
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popmargC/menumargC"]
+custom_minimum_size = Vector2(761, 243)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="popmargC/menumargC/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = -2
+alignment = 1
+
+[node name="StoryB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(1, 0, 0.639216, 1)
+self_modulate = Color(1, 0, 1, 1)
+clip_contents = true
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_drij2")
+text = "Story Mode"
+autowrap_mode = 3
+
+[node name="QuickmatchB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(0, 0.435294, 1, 1)
+self_modulate = Color(1, 1, 0, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0.0156863, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_bergx")
+text = "Quick match"
+autowrap_mode = 3
+
+[node name="OnlinemultiB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_bergx")
+text = "Online Multiplayer"
+autowrap_mode = 3
+
+[node name="FriendliesB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(0, 0.282353, 1, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_bergx")
+text = "Friendlies"
+autowrap_mode = 3
+
+[node name="SuperballB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(0.519585, 0.375814, 0, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_bergx")
+text = "Supreball League"
+autowrap_mode = 3
+
+[node name="Events" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(0.581984, 0.00349487, 0.914744, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_bergx")
+text = "Events"
+autowrap_mode = 3
+
+[node name="MarginContainerMalcom" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerMalcom"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ProfileIcon" type="TextureRect" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_srd0c")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Hi, Malcom"
+
+[node name="MarginContainerSettings" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_right = 44
+theme_override_constants/margin_bottom = 26
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerSettings"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Settings" type="TextureRect" parent="popmargC/MarginContainerSettings/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_srd0c")
+expand_mode = 1
+
+[node name="MarketPlace" type="TextureRect" parent="popmargC/MarginContainerSettings/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_srd0c")
+expand_mode = 1
+
+[node name="Back" type="TextureRect" parent="popmargC/MarginContainerSettings/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_srd0c")
+expand_mode = 1
+
+[node name="MarginContainerCoin" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerCoin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="CoinIcon" type="TextureRect" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_srd0c")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "340,000,000"
+
+[node name="MarginContainerNaira" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 44
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerNaira"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MoneyIcon" type="TextureRect" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_srd0c")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "60,000.00"
