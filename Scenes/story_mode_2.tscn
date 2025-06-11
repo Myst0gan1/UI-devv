@@ -1,0 +1,654 @@
+[gd_scene load_steps=12 format=3 uid="uid://dp27fg8d7ouwk"]
+
+[ext_resource type="Script" path="res://Scripts/popmarg_c.gd" id="1_ougtc"]
+[ext_resource type="Texture2D" uid="uid://bjqjelf3wk02k" path="res://8b12059fb898b5a752b28b13db6fb51ee977d467.png" id="2_evtkw"]
+[ext_resource type="Texture2D" uid="uid://djfait5t7wfy6" path="res://icon.svg" id="3_78ac0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8ncd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55vbe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pph1m"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmwcw"]
+bg_color = Color(0, 0.54902, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e1qi"]
+bg_color = Color(1, 1, 1, 1)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6m48q"]
+bg_color = Color(0, 0.54902, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqn6r"]
+bg_color = Color(0, 0.54902, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfs4u"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="StoryMode2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popmargC" type="MarginContainer" parent="." node_paths=PackedStringArray("storyB", "quickmatchB", "onlinemultiplayerB", "friendliesB", "superballleagueB", "eventsB", "buyLives", "objectives")]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ougtc")
+storyB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB")
+quickmatchB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/QuickmatchB")
+onlinemultiplayerB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/OnlinemultiB")
+friendliesB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/FriendliesB")
+superballleagueB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/SuperballB")
+eventsB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/Events")
+buyLives = NodePath("PanelBuyLives")
+objectives = NodePath("PanelObjectives")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popmargC"]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 2
+texture = ExtResource("2_evtkw")
+
+[node name="menumargC" type="MarginContainer" parent="popmargC"]
+custom_minimum_size = Vector2(900, 350)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_bottom = 50
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popmargC/menumargC"]
+custom_minimum_size = Vector2(761, 243)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="popmargC/menumargC/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = -2
+alignment = 1
+
+[node name="StoryB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(1, 0, 0.639216, 1)
+self_modulate = Color(1, 0, 1, 1)
+clip_contents = true
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_v8ncd")
+text = "1"
+autowrap_mode = 3
+
+[node name="QuickmatchB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(0, 0.435294, 1, 1)
+self_modulate = Color(1, 1, 0, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0.0156863, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_55vbe")
+text = "2"
+autowrap_mode = 3
+
+[node name="OnlinemultiB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_55vbe")
+text = "3"
+autowrap_mode = 3
+
+[node name="FriendliesB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(0, 0.282353, 1, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_55vbe")
+text = "4"
+autowrap_mode = 3
+
+[node name="SuperballB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(0.519585, 0.375814, 0, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_55vbe")
+text = "5"
+autowrap_mode = 3
+
+[node name="Events" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+modulate = Color(0.581984, 0.00349487, 0.914744, 1)
+custom_minimum_size = Vector2(210, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_55vbe")
+text = "6"
+autowrap_mode = 3
+
+[node name="MarginContainerMalcom" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerMalcom"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="backButton" type="Button" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+text = "<----"
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Lives"
+
+[node name="MarginContainerNaira" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 44
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerNaira"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="buyheartsButton" type="Button" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_pph1m")
+text = "Buy Hearts --->"
+
+[node name="PanelObjectives" type="Panel" parent="popmargC"]
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_vmwcw")
+
+[node name="MarginClosePage" type="MarginContainer" parent="popmargC/PanelObjectives"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+scale = Vector2(2, 2)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="ButtonClose" type="Button" parent="popmargC/PanelObjectives/MarginClosePage"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "X"
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/PanelObjectives"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.5
+offset_right = 88.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 55
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/PanelObjectives/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="richLabelObjectives" type="RichTextLabel" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 29
+bbcode_enabled = true
+text = "[center][b]OBJECTIVES[/b][/center]"
+autowrap_mode = 0
+
+[node name="Label2" type="Label" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Win Opponent to move to the next stage"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContLives" type="HBoxContainer" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = -1
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer/HBoxContLives"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("3_78ac0")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer/HBoxContLives"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("3_78ac0")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer/HBoxContLives"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("3_78ac0")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer/HBoxContLives"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("3_78ac0")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer/HBoxContLives"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("3_78ac0")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_3e1qi")
+text = "START"
+
+[node name="Button2" type="Button" parent="popmargC/PanelObjectives/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_6m48q")
+text = "CLOSE"
+
+[node name="PanelBuyLives" type="Panel" parent="popmargC"]
+visible = false
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_sqn6r")
+
+[node name="MarginClosePage" type="MarginContainer" parent="popmargC/PanelBuyLives"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+scale = Vector2(2, 2)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="ButtonClose" type="Button" parent="popmargC/PanelBuyLives/MarginClosePage"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "X"
+
+[node name="MarginContainerCoin" type="MarginContainer" parent="popmargC/PanelBuyLives"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -102.5
+offset_right = 102.5
+offset_bottom = 135.0
+grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="LabelStoryMode" type="Label" parent="popmargC/PanelBuyLives/MarginContainerCoin"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "BUY LIVES"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/PanelBuyLives"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = -52.0
+offset_right = 579.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme_override_constants/separation = 26
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="Label" type="Label" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(245, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "10 LIVES"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPickPlayer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="ButtonRight" type="Button" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer/MarginPickPlayer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.0196078, 0, 0, 0.121569)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xfs4u")
+text = "N 900"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer2/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer2/MarginPlayers"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="Label" type="Label" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer2/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(245, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "150 LIVES"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="MarginPickPlayer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer2/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer2/MarginPickPlayer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="ButtonRight" type="Button" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer/HBoxContainer2/MarginPickPlayer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.0196078, 0, 0, 0.121569)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xfs4u")
+text = "N 900"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="Label" type="Label" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(245, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "25 LIVES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginPickPlayer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="ButtonRight" type="Button" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer/MarginPickPlayer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.0196078, 0, 0, 0.121569)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xfs4u")
+text = "N 900"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer2/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer2/MarginPlayers"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="Label" type="Label" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer2/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(245, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "PLAYERS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="MarginPickPlayer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer2/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer2/MarginPickPlayer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="ButtonRight" type="Button" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer2/HBoxContainer2/MarginPickPlayer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.0196078, 0, 0, 0.121569)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xfs4u")
+text = "N 900"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="Label" type="Label" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(245, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "PLAYERS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="MarginPickPlayer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="ButtonRight" type="Button" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer/MarginPickPlayer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.0196078, 0, 0, 0.121569)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xfs4u")
+text = "N 900"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer2/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer2/MarginPlayers"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="Label" type="Label" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer2/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(245, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "2000 LIVES"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="MarginPickPlayer" type="MarginContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer2/MarginPickPlayer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer2/MarginPickPlayer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="ButtonRight" type="Button" parent="popmargC/PanelBuyLives/VBoxContainer/HBoxContainer3/HBoxContainer2/MarginPickPlayer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.0196078, 0, 0, 0.121569)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xfs4u")
+text = "N 900"
+
+[connection signal="pressed" from="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB" to="popmargC" method="_on_story_b_pressed"]
+[connection signal="pressed" from="popmargC/MarginContainerNaira/MalcomhboxContainer/buyheartsButton" to="popmargC" method="_on_buyhearts_button_pressed"]
+[connection signal="pressed" from="popmargC/PanelObjectives/MarginClosePage/ButtonClose" to="popmargC" method="_on_button_close_pressed"]
+[connection signal="pressed" from="popmargC/PanelBuyLives/MarginClosePage/ButtonClose" to="popmargC" method="_on_button_close_pressed"]

@@ -1,8 +1,8 @@
 extends MarginContainer
 @onready var scroll_container: ScrollContainer = $menumargC/NinePatchRect/ScrollContainer
 
-@export var buyLives: Panel
-
+#@export var buyLives: Panel
+#@export var objectives: Panel
 @export var storyB: Button
 @export var quickmatchB: Button
 @export var onlinemultiplayerB: Button
@@ -56,11 +56,22 @@ func _unhandled_input(event):
 
 
 
-func _on_buyhearts_button_pressed() -> void:
-	if buyLives:
-		buyLives.visible = true
+@export var buyLives: Panel
+@export var objectives: Panel
 
+func panelOpen() -> bool:
+	return buyLives.visible or objectives.visible
 
 func _on_button_close_pressed() -> void:
+	if objectives:
+		objectives.visible = false # Replace with function body.
 	if buyLives:
-		buyLives.visible = false # Replace with function body.
+		buyLives.visible = false
+
+func _on_buyhearts_button_pressed() -> void:
+	if buyLives and not panelOpen():
+		buyLives.visible = true # Replace with function body.
+
+func _on_story_b_pressed() -> void:
+	if objectives and not panelOpen():
+		objectives.visible = true # Replace with function body.

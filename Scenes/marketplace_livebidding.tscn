@@ -1,0 +1,958 @@
+[gd_scene load_steps=13 format=3 uid="uid://ci7lgign5gkkw"]
+
+[ext_resource type="Script" path="res://Scripts/popmarg_cc.gd" id="1_pmuue"]
+[ext_resource type="Texture2D" uid="uid://bjqjelf3wk02k" path="res://8b12059fb898b5a752b28b13db6fb51ee977d467.png" id="2_xf4hq"]
+[ext_resource type="Texture2D" uid="uid://djfait5t7wfy6" path="res://icon.svg" id="3_sypm6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8nd5"]
+bg_color = Color(0, 0.54902, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c63cx"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udnao"]
+bg_color = Color(0.6, 0.121569, 0.384314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_minqg"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gti85"]
+bg_color = Color(0.6, 1, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pukps"]
+bg_color = Color(0.6, 0.6, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ao7m"]
+bg_color = Color(0.6, 0.6, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wkefb"]
+bg_color = Color(0, 0.6, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tot7"]
+bg_color = Color(1, 0.352941, 0, 1)
+
+[node name="MarketplaceLivebidding" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popmargC" type="MarginContainer" parent="." node_paths=PackedStringArray("storyB", "quickmatchB", "onlinemultiplayerB", "friendliesB", "superballleagueB", "eventsB")]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pmuue")
+storyB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB")
+quickmatchB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2")
+onlinemultiplayerB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3")
+friendliesB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4")
+superballleagueB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5")
+eventsB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popmargC"]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 2
+texture = ExtResource("2_xf4hq")
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_bottom = 300
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="Label" type="RichTextLabel" parent="popmargC/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 42)
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[center][b]LIVE BIDDING[/b][/center]"
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Button" type="Button" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.917647, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_x8nd5")
+text = "PLAYERS"
+autowrap_mode = 3
+
+[node name="Button2" type="Button" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_c63cx")
+text = "TEAMS"
+
+[node name="Button3" type="Button" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_c63cx")
+text = "MY ORDERS"
+
+[node name="Button4" type="Button" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_c63cx")
+text = "MY PLAYERS"
+
+[node name="menumargC" type="MarginContainer" parent="popmargC"]
+custom_minimum_size = Vector2(900, 243)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 80
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popmargC/menumargC"]
+custom_minimum_size = Vector2(761, 243)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="popmargC/menumargC/NinePatchRect"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = -1
+alignment = 1
+
+[node name="StoryB" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_udnao")
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "JOHN"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "STRIKER"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SS - 87"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 3
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 0, 0.611765)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 59.0
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect/MarginContainer"]
+custom_minimum_size = Vector2(43, 50)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 48.0
+offset_right = 127.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "START PRICE"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "CURRENT BID"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "BUY NOW"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 131.0
+offset_right = 162.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "5,000"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,300"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,500"
+
+[node name="MarginContainer2" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 166.0
+offset_right = 260.0
+offset_bottom = 59.0
+theme_override_constants/margin_left = 16
+
+[node name="Button" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB/MarginContainer/HBoxContainer/ColorRect/MarginContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_minqg")
+text = "BUY PLAYER"
+
+[node name="StoryB2" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gti85")
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "JOHN"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "STRIKER"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SS - 87"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 3
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 0, 0.611765)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 59.0
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect/MarginContainer"]
+custom_minimum_size = Vector2(43, 50)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 48.0
+offset_right = 127.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "START PRICE"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "CURRENT BID"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "BUY NOW"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 131.0
+offset_right = 162.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "5,000"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,300"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,500"
+
+[node name="MarginContainer2" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 166.0
+offset_right = 260.0
+offset_bottom = 59.0
+theme_override_constants/margin_left = 16
+
+[node name="Button" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB2/MarginContainer/HBoxContainer/ColorRect/MarginContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_minqg")
+text = "BUY PLAYER"
+
+[node name="StoryB3" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_pukps")
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "JOHN"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "STRIKER"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SS - 87"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 3
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 0, 0.611765)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 59.0
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect/MarginContainer"]
+custom_minimum_size = Vector2(43, 50)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 48.0
+offset_right = 127.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "START PRICE"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "CURRENT BID"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "BUY NOW"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 131.0
+offset_right = 162.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "5,000"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,300"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,500"
+
+[node name="MarginContainer2" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 166.0
+offset_right = 260.0
+offset_bottom = 59.0
+theme_override_constants/margin_left = 16
+
+[node name="Button" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB3/MarginContainer/HBoxContainer/ColorRect/MarginContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_minqg")
+text = "BUY PLAYER"
+
+[node name="StoryB4" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ao7m")
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "JOHN"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "STRIKER"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SS - 87"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 3
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 0, 0.611765)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 59.0
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect/MarginContainer"]
+custom_minimum_size = Vector2(43, 50)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 48.0
+offset_right = 127.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "START PRICE"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "CURRENT BID"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "BUY NOW"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 131.0
+offset_right = 162.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "5,000"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,300"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,500"
+
+[node name="MarginContainer2" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 166.0
+offset_right = 260.0
+offset_bottom = 59.0
+theme_override_constants/margin_left = 16
+
+[node name="Button" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB4/MarginContainer/HBoxContainer/ColorRect/MarginContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_minqg")
+text = "BUY PLAYER"
+
+[node name="StoryB5" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wkefb")
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "JOHN"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "STRIKER"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SS - 87"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 3
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 0, 0.611765)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 59.0
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect/MarginContainer"]
+custom_minimum_size = Vector2(43, 50)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 48.0
+offset_right = 127.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "START PRICE"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "CURRENT BID"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "BUY NOW"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 131.0
+offset_right = 162.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "5,000"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,300"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,500"
+
+[node name="MarginContainer2" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 166.0
+offset_right = 260.0
+offset_bottom = 59.0
+theme_override_constants/margin_left = 16
+
+[node name="Button" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB5/MarginContainer/HBoxContainer/ColorRect/MarginContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_minqg")
+text = "BUY PLAYER"
+
+[node name="StoryB6" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_4tot7")
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "JOHN"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "STRIKER"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SS - 87"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 3
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 0, 0.611765)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 59.0
+
+[node name="TextureRect" type="TextureRect" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect/MarginContainer"]
+custom_minimum_size = Vector2(43, 50)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 48.0
+offset_right = 127.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "START PRICE"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "CURRENT BID"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "BUY NOW"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 131.0
+offset_right = 162.0
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "5,000"
+
+[node name="Label2" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,300"
+
+[node name="Label3" type="Label" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "6,500"
+
+[node name="MarginContainer2" type="MarginContainer" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 2
+offset_left = 166.0
+offset_right = 260.0
+offset_bottom = 59.0
+theme_override_constants/margin_left = 16
+
+[node name="Button" type="Button" parent="popmargC/menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB6/MarginContainer/HBoxContainer/ColorRect/MarginContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_minqg")
+text = "BUY PLAYER"
+
+[node name="MarginContainerMalcom" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerMalcom"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ProfileIcon" type="TextureRect" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Hi, Malcom"
+
+[node name="MarginContainerSettings" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_right = 44
+theme_override_constants/margin_bottom = 26
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerSettings"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Settings" type="TextureRect" parent="popmargC/MarginContainerSettings/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="MarketPlace" type="TextureRect" parent="popmargC/MarginContainerSettings/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="MarginContainerCoin" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerCoin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="CoinIcon" type="TextureRect" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "340,000,000"
+
+[node name="MarginContainerNaira" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 44
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerNaira"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MoneyIcon" type="TextureRect" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_sypm6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "60,000.00"
