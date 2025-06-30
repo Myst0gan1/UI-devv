@@ -203,6 +203,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_pph1m")
 text = "Buy Hearts --->"
 
 [node name="PanelObjectives" type="Panel" parent="popmargC"]
+visible = false
 custom_minimum_size = Vector2(900, 500)
 layout_mode = 2
 size_flags_horizontal = 4

@@ -1,0 +1,1712 @@
+[gd_scene load_steps=5 format=3 uid="uid://riid0nwsmldf"]
+
+[ext_resource type="Texture2D" uid="uid://bjqjelf3wk02k" path="res://8b12059fb898b5a752b28b13db6fb51ee977d467.png" id="1_4glar"]
+[ext_resource type="Texture2D" uid="uid://djfait5t7wfy6" path="res://icon.svg" id="2_ko45b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mevye"]
+bg_color = Color(0, 0.54902, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gu6pk"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popmargC" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popmargC"]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 2
+texture = ExtResource("1_4glar")
+
+[node name="menumargC" type="MarginContainer" parent="popmargC"]
+custom_minimum_size = Vector2(900, 243)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 120
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="Button" type="Button" parent="popmargC/menumargC/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "<----"
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="laeaderboardLabel" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/laeaderboardLabel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/laeaderboardLabel/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "LEADERBOARD"
+
+[node name="Button6" type="Button" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_mevye")
+alignment = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button6/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "THIS MONTH"
+
+[node name="Button7" type="Button" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_gu6pk")
+alignment = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button7/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "LAST MONTH"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 100
+
+[node name="Control" type="Control" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2"]
+layout_direction = 3
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer4" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer5" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer6" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer7" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer7/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer8" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer8/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer9" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer9/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer10" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer10/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer11" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer11/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer12" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer12/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer13" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer13/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer14" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer14/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer15" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer15/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer16" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer16/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer17" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer17/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginContainer18" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="MarginPlayers" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+color = Color(0, 0.54902, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer/MarginPlayers"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer/MarginPlayers/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "9I39 PTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers3" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer/MarginPlayers3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer/MarginPlayers3/MarginContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MALCOM NAME SURNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="MarginPlayers2" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer/MarginPlayers2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer/MarginContainer18/HBoxContainer/MarginPlayers2/MarginContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+text = "Stand a chance to win cash prizes by appearing on any of our leaderboards!
+For games you won you gain;
+
+2 points for 2 player games
+
+3 points for 3 player games
+
+4 points for 4 player games
+
+Meanwhile;
+
+For games lost;
+
+You gain one (1) point
+
+To qualify for the daily prizes, you need a minimum of 60 points.
+
+The top 5 players with the highest points will be the winners.
+
+The rewards are as follows:
+
+1st prize - NGN 15,000
+
+2nd prize-NGN 10,000
+
+3rd prize-NGN 10,000
+
+4th prize -NGN 5,000
+
+5th prize - NGN 5,000
+
+To qualify for the monthly grand prize, you need a minimum of 2000 points. Once qualified, the winners will be the top player with the highest points. The reward is as follows:
+
+Grand Prize - NGN 100,000"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="MarginContainerMalcom" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerMalcom"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ProfileIcon" type="TextureRect" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_ko45b")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Hi, Malcom"
+
+[node name="MarginContainerCoin" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerCoin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="CoinIcon" type="TextureRect" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_ko45b")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "340,000,000"
+
+[node name="MarginContainerNaira" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 44
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerNaira"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MoneyIcon" type="TextureRect" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_ko45b")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "60,000.00"

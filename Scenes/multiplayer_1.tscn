@@ -1,20 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://drd580s7lpqq8"]
+[gd_scene load_steps=6 format=3 uid="uid://dgb34qfddk2lr"]
 
-[ext_resource type="Script" path="res://Scripts/popmarg_cc.gd" id="1_sb7h5"]
-[ext_resource type="Texture2D" uid="uid://bjqjelf3wk02k" path="res://8b12059fb898b5a752b28b13db6fb51ee977d467.png" id="2_nbyx3"]
-[ext_resource type="Texture2D" uid="uid://djfait5t7wfy6" path="res://icon.svg" id="3_2pyhy"]
+[ext_resource type="Script" path="res://Scripts/popmarg_cc.gd" id="1_d00dl"]
+[ext_resource type="Texture2D" uid="uid://bjqjelf3wk02k" path="res://8b12059fb898b5a752b28b13db6fb51ee977d467.png" id="2_ld21w"]
+[ext_resource type="Texture2D" uid="uid://djfait5t7wfy6" path="res://icon.svg" id="3_dt6ob"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1frb3"]
-bg_color = Color(0, 0.54902, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dahtc"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilpv6"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7b4x"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycssg"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxj2f"]
-
-[node name="MarketplacePlayers" type="Control"]
+[node name="multiplayer1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sb7h5")
+script = ExtResource("1_d00dl")
 storyB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/StoryB")
 quickmatchB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/QuickmatchB")
 onlinemultiplayerB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/OnlinemultiB")
@@ -41,7 +35,7 @@ eventsB = NodePath("menumargC/NinePatchRect/ScrollContainer/HBoxContainer/Events
 [node name="NinePatchRect" type="NinePatchRect" parent="popmargC"]
 custom_minimum_size = Vector2(800, 360)
 layout_mode = 2
-texture = ExtResource("2_nbyx3")
+texture = ExtResource("2_ld21w")
 
 [node name="MarginContainer" type="MarginContainer" parent="popmargC"]
 layout_mode = 2
@@ -56,49 +50,12 @@ size_flags_vertical = 0
 theme_override_constants/separation = 8
 
 [node name="Label" type="RichTextLabel" parent="popmargC/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(250, 42)
+custom_minimum_size = Vector2(360, 42)
 layout_mode = 2
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
-text = "[center][b]MARKETPLACE[/b][/center]"
+text = "[center][b]SELECT A TOURNAMENT[/b][/center]"
 autowrap_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="popmargC/MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 50
-
-[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 30
-
-[node name="Button" type="Button" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 40)
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0.917647, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_1frb3")
-text = "PLAYERS"
-autowrap_mode = 3
-
-[node name="Button2" type="Button" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_ilpv6")
-text = "TEAMS"
-
-[node name="Button3" type="Button" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_ilpv6")
-text = "TRAINING"
-
-[node name="Button4" type="Button" parent="popmargC/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_ilpv6")
-text = "ASSETS"
 
 [node name="menumargC" type="MarginContainer" parent="popmargC"]
 custom_minimum_size = Vector2(900, 243)
@@ -140,7 +97,7 @@ size_flags_vertical = 4
 theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_ycssg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dahtc")
 text = "Live Bidding"
 autowrap_mode = 3
 
@@ -154,7 +111,7 @@ size_flags_vertical = 4
 theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
 theme_override_colors/font_color = Color(0, 0, 0.0156863, 1)
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_jxj2f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7b4x")
 text = "John
 Striker"
 autowrap_mode = 3
@@ -168,7 +125,7 @@ size_flags_vertical = 4
 theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_jxj2f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7b4x")
 text = "Samson
 Defender"
 autowrap_mode = 3
@@ -182,7 +139,7 @@ size_flags_vertical = 4
 theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_jxj2f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7b4x")
 text = "Gab
 Striker"
 autowrap_mode = 3
@@ -196,7 +153,7 @@ size_flags_vertical = 4
 theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_jxj2f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7b4x")
 text = "Kohl
 Keeper"
 autowrap_mode = 3
@@ -210,7 +167,7 @@ size_flags_vertical = 4
 theme_override_colors/font_disabled_color = Color(0.159401, 0.465967, 0.414915, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_jxj2f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7b4x")
 text = "Nasiru
 Midfilder"
 autowrap_mode = 3
@@ -229,7 +186,7 @@ theme_override_constants/separation = 12
 [node name="ProfileIcon" type="TextureRect" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-texture = ExtResource("3_2pyhy")
+texture = ExtResource("3_dt6ob")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
@@ -252,13 +209,13 @@ theme_override_constants/separation = 12
 [node name="Settings" type="TextureRect" parent="popmargC/MarginContainerSettings/MalcomhboxContainer"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-texture = ExtResource("3_2pyhy")
+texture = ExtResource("3_dt6ob")
 expand_mode = 1
 
 [node name="MarketPlace" type="TextureRect" parent="popmargC/MarginContainerSettings/MalcomhboxContainer"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-texture = ExtResource("3_2pyhy")
+texture = ExtResource("3_dt6ob")
 expand_mode = 1
 
 [node name="MarginContainerCoin" type="MarginContainer" parent="popmargC"]
@@ -275,7 +232,7 @@ theme_override_constants/separation = 12
 [node name="CoinIcon" type="TextureRect" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-texture = ExtResource("3_2pyhy")
+texture = ExtResource("3_dt6ob")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
@@ -298,7 +255,7 @@ theme_override_constants/separation = 12
 [node name="MoneyIcon" type="TextureRect" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-texture = ExtResource("3_2pyhy")
+texture = ExtResource("3_dt6ob")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]

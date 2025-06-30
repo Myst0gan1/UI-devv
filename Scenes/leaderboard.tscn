@@ -1,0 +1,263 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbrfoc7msdhxn"]
+
+[ext_resource type="Texture2D" uid="uid://bjqjelf3wk02k" path="res://8b12059fb898b5a752b28b13db6fb51ee977d467.png" id="1_bbd1c"]
+[ext_resource type="Texture2D" uid="uid://djfait5t7wfy6" path="res://icon.svg" id="2_s2lc8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65xc5"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popmargC" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popmargC"]
+custom_minimum_size = Vector2(800, 360)
+layout_mode = 2
+texture = ExtResource("1_bbd1c")
+
+[node name="menumargC" type="MarginContainer" parent="popmargC"]
+custom_minimum_size = Vector2(900, 243)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 120
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="Button" type="Button" parent="popmargC/menumargC/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "<----"
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Button5" type="Button" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_65xc5")
+alignment = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button5/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "DAILY"
+
+[node name="Button6" type="Button" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_65xc5")
+alignment = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button6/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "WEEKLY"
+
+[node name="Button7" type="Button" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_65xc5")
+alignment = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer/Button7/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "MONTHLY"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="popmargC/menumargC/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 100
+
+[node name="Control" type="Control" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2"]
+layout_direction = 3
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 28
+bbcode_enabled = true
+text = "[b]GAME RULES[/b]"
+
+[node name="Label" type="Label" parent="popmargC/menumargC/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+text = "Stand a chance to win cash prizes by appearing on any of our leaderboards!
+For games you won you gain;
+
+2 points for 2 player games
+
+3 points for 3 player games
+
+4 points for 4 player games
+
+Meanwhile;
+
+For games lost;
+
+You gain one (1) point
+
+To qualify for the daily prizes, you need a minimum of 60 points.
+
+The top 5 players with the highest points will be the winners.
+
+The rewards are as follows:
+
+1st prize - NGN 15,000
+
+2nd prize-NGN 10,000
+
+3rd prize-NGN 10,000
+
+4th prize -NGN 5,000
+
+5th prize - NGN 5,000
+
+To qualify for the monthly grand prize, you need a minimum of 2000 points. Once qualified, the winners will be the top player with the highest points. The reward is as follows:
+
+Grand Prize - NGN 100,000"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="MarginContainerMalcom" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerMalcom"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ProfileIcon" type="TextureRect" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_s2lc8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerMalcom/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Hi, Malcom"
+
+[node name="MarginContainerCoin" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 16
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerCoin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="CoinIcon" type="TextureRect" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_s2lc8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerCoin/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "340,000,000"
+
+[node name="MarginContainerNaira" type="MarginContainer" parent="popmargC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 44
+
+[node name="MalcomhboxContainer" type="HBoxContainer" parent="popmargC/MarginContainerNaira"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MoneyIcon" type="TextureRect" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_s2lc8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popmargC/MarginContainerNaira/MalcomhboxContainer"]
+custom_minimum_size = Vector2(78, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "60,000.00"

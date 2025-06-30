@@ -65,7 +65,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 theme_override_constants/margin_left = 13
-theme_override_constants/margin_bottom = 300
+theme_override_constants/margin_bottom = 365
 
 [node name="HBoxContainer" type="HBoxContainer" parent="popmargC/MarginContainer"]
 layout_mode = 2
@@ -118,12 +118,11 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_c63cx")
 text = "MY PLAYERS"
 
 [node name="menumargC" type="MarginContainer" parent="popmargC"]
-custom_minimum_size = Vector2(900, 243)
+custom_minimum_size = Vector2(900, 300)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 80
 
 [node name="NinePatchRect" type="NinePatchRect" parent="popmargC/menumargC"]
 custom_minimum_size = Vector2(761, 243)
